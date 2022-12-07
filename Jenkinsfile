@@ -5,9 +5,8 @@ pipeline {
     
         stage('Maven build') {
             steps {
-                 
-                 sh
-                   """
+                
+                sh """
                      sudo apt update 
                      sudo apt install default-jdk
                      sudo apt install maven
