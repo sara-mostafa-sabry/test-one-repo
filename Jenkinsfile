@@ -1,10 +1,6 @@
 pipeline {
     agent {label 'On-demand-agents'}  
     
-    tools {
-        maven "MAVEN3"
-    }
-    
     stages {
     
         stage('Maven build') {
