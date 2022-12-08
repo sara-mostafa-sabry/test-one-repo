@@ -7,7 +7,7 @@ pipeline {
             steps {
                 
                 sh """
-                
+                       install --help 
                        install maven
                      
                    """
