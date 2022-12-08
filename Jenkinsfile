@@ -8,8 +8,8 @@ pipeline {
                 
                 sh """
                 
-                     sudo apt install default-jdk
-                     sudo apt install maven
+                      apt install default-jdk
+                      apt install maven
                      
                    """
                 }    
