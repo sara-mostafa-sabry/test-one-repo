@@ -8,7 +8,6 @@ pipeline {
                 
                 sh """
                 
-                       install default-jdk
                        install maven
                      
                    """
