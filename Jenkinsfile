@@ -10,7 +10,7 @@ pipeline {
         stage('Maven build') { 
             
             environment {
-            JAVA_OPTS="-Xms256MB -Xmx1024MB"
+            MAVEN_OPTS="-Xms256MB -Xmx1024MB"
             }
             
             steps {
