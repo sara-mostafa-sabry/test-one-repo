@@ -10,8 +10,7 @@ pipeline {
         stage('Maven build') {
             steps {
                
-             sh 
-                "
+             sh "
                   java -version
                   mvn install 
                 "
