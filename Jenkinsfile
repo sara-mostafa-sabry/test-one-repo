@@ -10,7 +10,8 @@ pipeline {
         stage('Maven build') { 
             
             environment {
-            MAVEN_OPTS="-Xms256MB -Xmx1024MB"
+            #JAVA_OPTS="-Xms256MB -Xmx1024MB"
+            MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128m"
             }
             
             steps {
