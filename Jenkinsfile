@@ -10,6 +10,7 @@ pipeline {
                   sh """
                        java -version 
                        mvn -version
+                       ./mvnw spring-boot:run 
                      """
                 
                 }    
