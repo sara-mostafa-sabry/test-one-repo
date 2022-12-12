@@ -1,23 +1,15 @@
 pipeline {
     agent {label 'On-demand-agents'}  
     
-     tools {
-        maven "MAVEN3"
-     }
-    
     stages {
     
         stage('Maven build') { 
-            
-            environment {
-            MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128m"
-            }
             
             steps {
                
                   sh """
                        java -version 
-                       mvn install
+                       mvn -version
                      """
                 
                 }    
