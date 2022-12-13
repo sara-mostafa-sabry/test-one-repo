@@ -20,7 +20,7 @@ pipeline {
         stage('Docker build') {
             steps {
                     
-                 sh "docker build -t petclinic:v$BUILD_NUMBER ."
+                 sh "docker build -t petclinic:v$BUILD_NUMBER spring-petclinic-app/Dockerfile "
 
             }
         }
@@ -28,7 +28,7 @@ pipeline {
         stage('Docker deploy')  {
              steps {
                     
-                 sh "docker run -d -p 8000:8080 -e JAVA_OPTS='-Xms256MB -Xmx512MB' --name java-app petclinic:v$BUILD_NUMBER"
+                 sh "docker run -d -p 8000:8080 -e JAVA_OPTS='-Xms256MB -Xmx512MB' -v /var/run/docker.sock:/var/run/docker.sock --name java-app petclinic:v$BUILD_NUMBER"
 
             }
         }
