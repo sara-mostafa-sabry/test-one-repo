@@ -10,7 +10,7 @@ pipeline {
                   sh """
                        java -version 
                        mvn -version
-                       ./mvnw build  
+                       ./mvnw package 
                      """
                 
                 }    
