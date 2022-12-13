@@ -20,7 +20,7 @@ pipeline {
         stage('Docker build') {
             steps {
                     
-                 sh "docker build -t petclinic:v$BUILD_NUMBER spring-petclinic-app/Dockerfile "
+                 sh "docker build -t petclinic:v$BUILD_NUMBER . "
 
             }
         }
