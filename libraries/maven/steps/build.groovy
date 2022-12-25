@@ -1,4 +1,4 @@
-void call(){
+def call(){
     stage("Maven: Build"){
 
             steps {
