@@ -1,4 +1,4 @@
-void call(build){  
+void call(){  
         stage("Maven build")
                 {
                 sh  """ 
