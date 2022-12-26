@@ -6,13 +6,13 @@ pipeline {
     stage('Maven build') { 
            steps {
              build()
-                 }
+           }
     }
     
      stage('Docker build') {
             steps {
               dockerBuild()
-                  }
+            }
        
     }
       
