@@ -5,8 +5,8 @@ stages {
     
     stage('CI') { 
            steps {
-             build()
-             dockerBuild()
+             build
+             dockerBuild
            }
     }    
 }   
