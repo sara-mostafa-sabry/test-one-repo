@@ -1,7 +1,6 @@
 void call(){
-    stage("Maven: Build"){
-        steps {
+    stage("Maven: Build")
+                {
                   sh " ./mvnw package "
                 }
-        }
 }
