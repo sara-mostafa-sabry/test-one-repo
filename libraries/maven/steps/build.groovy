@@ -1,5 +1,5 @@
 void call(){  
-        stage("Maven build")
+        step("build")
                 {
                 sh  """ 
                        mvn -version
