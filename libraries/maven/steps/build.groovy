@@ -1,9 +1,9 @@
 void call(){
-    agent {label 'docker-agents'}  {
+    node {
     stage("Maven: Build")
                 {   
                 sh  """ mvn -version
-                    ./mvnw package 
+                       ./mvnw package 
                     """
                 }
 }
