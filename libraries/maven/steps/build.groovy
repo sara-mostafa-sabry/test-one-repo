@@ -1,10 +1,11 @@
-void call(){
-    node {
-    stage("Maven: Build")
-                {   
-                sh  """ mvn -version
+void call(){ 
+    agent('docker-agents'){
+        stage("Maven: Build")
+                {
+                sh  """ 
+                       mvn -version
                        ./mvnw package 
                     """
-                }
-}
+                } 
+    }
 }
