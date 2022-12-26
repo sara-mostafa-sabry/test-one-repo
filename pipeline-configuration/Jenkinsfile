@@ -5,7 +5,7 @@ stages {
     
     stage('CI') { 
            steps {
-             build()
+             maven_build()
              dockerBuild()
            }
     }    
