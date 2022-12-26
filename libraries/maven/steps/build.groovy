@@ -2,7 +2,12 @@ void call(){
     node{
     stage("Maven: Build")
                 {
-                  sh " ./mvnw package "
+                  sh
+                    """
+                    java -version
+                    mvn -version
+                    ./mvnw package 
+                    """
                 }
 }
 }
