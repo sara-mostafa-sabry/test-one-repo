@@ -1,5 +1,5 @@
 void call(){ 
-    agent('docker-agents'){
+    agent {label 'docker-agents'}  
         stage("Maven build")
                 {
                 sh  """ 
@@ -7,5 +7,4 @@ void call(){
                        ./mvnw package 
                     """
                 } 
-    }
 }
