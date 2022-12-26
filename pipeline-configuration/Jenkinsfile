@@ -6,7 +6,8 @@ stages {
     stage('CI') { 
            steps {
              Maven build
-             dockerBuild
+             Build docker image
+             Docker deploy
            }
     }    
 }   
