@@ -1,2 +1,5 @@
-build()
-dockerBuild()
+pipeline{
+  agent {docker-agents}
+  build()
+  dockerBuild()
+}
