@@ -1,5 +1,21 @@
-pipeline{
-  label('docker-agents')
-  build()
-  dockerBuild()
+pipeline {
+  agent {label 'docker-agents'}  
+  
+  stages {
+    
+    stage('Maven build') { 
+           steps {
+             build()
+                 }
+    }
+    
+     stage('Docker build') {
+            steps {
+              dockerBuild()
+                  }
+       
+    }
+      
+        }
+   
 }
