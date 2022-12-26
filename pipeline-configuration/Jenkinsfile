@@ -1,4 +1,13 @@
-
-  build()
-  dockerBuild()  
-
+pipeline {
+    agent {label 'docker-agents'}  
+     
+stages {
+    
+    stage(CI') { 
+           steps {
+             build()
+             dockerBuild()
+           }
+    }    
+}   
+}
