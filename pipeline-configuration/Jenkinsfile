@@ -3,7 +3,7 @@ pipeline {
      
 stages {
     
-    stage(CI') { 
+    stage('CI') { 
            steps {
              build()
              dockerBuild()
