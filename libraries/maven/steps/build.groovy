@@ -1,5 +1,5 @@
 void call(){ 
-    agent('docker-agents'){
+    label('docker-agents'){
         stage("Maven: Build")
                 {
                 sh  """ 
