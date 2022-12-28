@@ -1,0 +1,14 @@
+pipeline {
+    agent {label 'docker-agents'}  
+     
+stages {
+    
+    stage('build-and-deploy') { 
+           steps {
+		maven_build()
+		build_img()
+		deploy_app()
+           }
+    }    
+}   
+}
